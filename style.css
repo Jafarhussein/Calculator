@@ -1,0 +1,61 @@
+*{
+   box-sizing: border-box;
+   font-family: sans-serif;
+   font-weight: normal; 
+}
+body{
+    padding: 0;
+    margin: 0;
+     background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+    color: #ffffff;
+  
+}
+.calculator-grid{
+    /*grid var en display som var perfekt eftersom jag kan flytta på knappar och göra knappar ta mer plats*/
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto)repeat(5,100px);
+}
+
+.calculator-grid>button{
+    /*enkelt design på knapparna*/
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: lightgray;
+}
+.calculator-grid>button:hover{
+    background-color: lightgreen;
+}
+.span-two{
+    /*Jag ville att "=" knappen ska vara större och ha en apple kalkulator design*/
+    grid-column: span 2;
+    border-bottom-right-radius: 7px;
+}
+#dot{
+    border-bottom-left-radius: 7px;
+}
+#equal{
+    background-color: darkorange;
+}
+/*output fälten vill jag ha mörkt så att den passar bättre med bakgrunden*/
+.output{
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #5C5B5B;
+    font-size: 3rem;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
